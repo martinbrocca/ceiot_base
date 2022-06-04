@@ -4,9 +4,7 @@ from pandas import isnull
 def load_secrets(filename, section, secret):
     """ Loads secret value stored in the filename provided (default to secrets.ini) """
     if filename == "":
-       #filename ='~/esp/ceiot_base/config/secrets.ini'
-       filename ='/home/martin/esp/ceiot_base/config/secrets.ini'
-       #filename ='./secrets.ini'
+       filename ='./secrets.ini'
     # create a parser
     parser = ConfigParser()
     # read config file
