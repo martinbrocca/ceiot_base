@@ -45,6 +45,13 @@ app.post('/measurement', function (req, res) {
 	res.send("received measurement into " +  insertedId);
 });
 
+
+app.post('/measurement2', function (req, res) {
+-       console.log("device id    : " + req.body.id + " key         : " + req.body.key + " temperature : " + req.body.t + " humidity    : " + req.body.h + " timestamp    : " + req.body.ts );	
+    const {insertedId} = insertMeasurement({id:req.body.id, t:req.body.t, h:req.body.h, ts:req.body.ts});
+	res.send("received measurement into " +  insertedId);
+});
+
 app.post('/device', function (req, res) {
 	console.log("device id    : " + req.body.id + " name        : " + req.body.n + " key         : " + req.body.k );
 
